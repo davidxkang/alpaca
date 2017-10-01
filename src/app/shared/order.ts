@@ -9,6 +9,6 @@ export class Order {
     status: String; // => departed
     deliveryDate: String; // => date, evening/afternoon/moring;
     timeStamp: Number;
-    active: boolean = true;
-    archived: boolean = false;
+    active: boolean;
+    archived: boolean;
 }
