@@ -42,34 +42,34 @@ export class OrderDashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.afAuth.auth.currentUser === null) {
-      this.router.navigate(['/']);
-    }
-    if (document.getElementsByClassName('modal-backdrop').length >= 1){
-      setTimeout(function() {
-        location.reload();
-      }, 1000);
-    }
+    // if (this.afAuth.auth.currentUser === null) {
+    //   this.router.navigate(['/']);
+    // }
+    // if (document.getElementsByClassName('modal-backdrop').length >= 1){
+    //   setTimeout(function() {
+    //     location.reload();
+    //   }, 1000);
+    // }
 
-    this.afAuth.auth.onIdTokenChanged(user => {
-      if(user) {
-        this.getList()
-      }
-    })
+    // this.afAuth.auth.onIdTokenChanged(user => {
+    //   if(user) {
+    //     this.getList()
+    //   }
+    // })
 
-    this.afAuth.authState.subscribe(()=>{
-      this.userService.getUser(this.afAuth.auth.currentUser.uid)
-      .subscribe((userData)=>{
-        console.log(userData)
-        this.firstName = userData.firstname;
-        this.lastName = userData.lastname;
-        this.email = userData.email;
-        this.address = userData.address;
-        this.key = userData.key;
-        this.imageUrl = userData.imageUrl;
-        this.url = this.imageUrl;
-      })
-    })
+    // this.afAuth.authState.subscribe(()=>{
+    //   this.userService.getUser(this.afAuth.auth.currentUser.uid)
+    //   .subscribe((userData)=>{
+    //     console.log(userData)
+    //     this.firstName = userData.firstname;
+    //     this.lastName = userData.lastname;
+    //     this.email = userData.email;
+    //     this.address = userData.address;
+    //     this.key = userData.key;
+    //     this.imageUrl = userData.imageUrl;
+    //     this.url = this.imageUrl;
+    //   })
+    // })
     // may need to define some static thing to order
     // this.orders = this.orderService.getOrdersList({limitToLast: 5});
   }
@@ -77,6 +77,14 @@ export class OrderDashboardComponent implements OnInit {
   logout() {
     this.authService.logout();
     this.router.navigate(['/'])
+  }
+
+  portfolio() {
+    this.router.navigate(['archive'])
+  }
+
+  gohome() {
+    this.router.navigate(['dashboard'])
   }
 
 

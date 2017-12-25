@@ -74,9 +74,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.afAuth.authState.subscribe((res)=> {
-      if (res.uid) {
+      // if (res.uid) {
         this.router.navigate(['/dashboard'])
-      }
+      // }
     })
     this.burger = document.querySelector('.burger');
     this.menu = document.querySelector('.menu');

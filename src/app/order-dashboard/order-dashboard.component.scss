@@ -3,16 +3,18 @@
   
   /* Profile base class */
   .carousel {
-  margin-bottom: 4rem;
-  background: linear-gradient(-45deg, #fff9d1, #febeae, #b9f2f7,  #06c8d9);
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
-  line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,.075);
+  // margin-bottom: 4rem;
+  // background: linear-gradient(-45deg, #fff9d1, #febeae, #b9f2f7,  #06c8d9);
+	// background-size: 400% 400%;
+	// -webkit-animation: Gradient 15s ease infinite;
+	// -moz-animation: Gradient 15s ease infinite;
+	// animation: Gradient 15s ease infinite;
+  // line-height: 1.5;
+	// -webkit-font-smoothing: antialiased;
+  // box-shadow: 0 2px 3px 0 rgba(0,0,0,.075);
+  background: rgb(87, 87, 87);
 }
+
 
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
@@ -28,7 +30,7 @@
   
   /* Declare height of profile welcome because of positioning of img element */
   .carousel-item {
-    height: 20rem;
+    height: 50rem;
 }
 
   /* Make our profile responsive */
@@ -36,8 +38,8 @@
   @media (min-width: 40em) {
     /* Bump up size of profile content */
     .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
+      margin-bottom: 3rem;
+      font-size: 5rem;
       line-height: 1.4;
     }
   
