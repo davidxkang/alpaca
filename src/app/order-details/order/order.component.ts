@@ -32,11 +32,11 @@ export class OrderComponent {
 
   ngOnInit() {
 
-    this.afAuth.auth.onIdTokenChanged(user => {
-        if(user) {
-          this.getList()
-        }
-    })
+    // this.afAuth.auth.onIdTokenChanged(user => {
+    //     if(user) {
+    //       this.getList()
+    //     }
+    // })
 
   }
   

@@ -41,27 +41,7 @@ export class ArchiveComponent implements OnInit {
 
   ngOnInit() {
 
-    if (document.getElementsByClassName('modal-backdrop').length >= 1){
-      location.reload();
-    }
-
-    this.afAuth.auth.onIdTokenChanged(user => {
-      if(user) {
-        this.getList()
-      }
-    })
-
-    this.afAuth.authState.subscribe(()=>{
-      this.userService.getUser(this.afAuth.auth.currentUser.uid)
-      .subscribe((userData)=>{
-        console.log(userData)
-        this.firstName = userData.firstname;
-        this.lastName = userData.lastname;
-        this.email = userData.email;
-        this.address = userData.address;
-        this.key = userData.key
-      })
-    })
+  
     // may need to define some static thing to order
     // this.orders = this.orderService.getOrdersList({limitToLast: 5});
   }
@@ -69,6 +49,14 @@ export class ArchiveComponent implements OnInit {
   logout() {
     this.authService.logout();
     this.router.navigate(['/'])
+  }
+
+  portfolio() {
+    this.router.navigate(['archive'])
+  }
+
+  gohome() {
+    this.router.navigate(['dashboard'])
   }
 
 
@@ -95,7 +83,7 @@ export class ArchiveComponent implements OnInit {
         this.orders = data;
         console.log(this.orders)
         this.orderService.createTimestamp(this.orders);
-        this.orderService.populateImages(this.orders);
+        // this.orderService.populateImages(this.orders);
       })
   }
 
