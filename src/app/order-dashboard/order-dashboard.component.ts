@@ -4,7 +4,7 @@ import { AuthService } from '../services/auth.service'
 import { Order } from '../shared/order';
 import { User } from '../shared/user';
 import { Upload } from '../shared/upload';
-import { FirebaseListObservable } from 'angularfire2/database'; 
+// import { FirebaseListObservable } from 'angularfire2/database'; 
 import { AngularFireAuth } from 'angularfire2/auth';
 import { UserService } from '../services/user.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
@@ -121,7 +121,7 @@ export class OrderDashboardComponent implements OnInit {
       .subscribe((data) => {
         this.orders = data;
         this.orderService.createTimestamp(this.orders);
-        this.orderService.populateImages(this.orders);
+        // this.orderService.populateImages(this.orders);
       })
   }
 
