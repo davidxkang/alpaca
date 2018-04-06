@@ -26,10 +26,10 @@ export class LoginComponent {
     console.log(this.email);
   }
 
-//   login() {
-//     this.authService.login(this.email, this.password);
-//     this.email = this.password = '';    
-//   }
+  // login() {
+  //   this.authService.login(this.email, this.password);
+  //   this.email = this.password = '';    
+  // }
 
 //   facebookAuth() {
 //     this.authService.facebookLogin();

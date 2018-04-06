@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
+    "startlocal": "ng serve",
     "postinstall": "ng build --aot -prod",
     "build": "ng build",
     "test": "ng test",
